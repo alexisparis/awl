@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    <body>
+        
+        <h1>Création d'un premier assistant : </h1><br/>
+        
+        Ce didacticiel vous permettra en quelques minutes de créer votre premier assistant.<br/>    
+        Il s'agit d'un premier exemple basique vous permettant, à la manière d'un livre, de parcourir plusieurs pages.<br/><br/>
+        
+        La première chose à faire est de créer la boite de dialogue qui représentera graphiquement votre assistant :
+        
+        <code><pre>
+Wizard wizard = new Wizard((JFrame)null);</pre></code>
+        
+        Le principe d'un assistant est souvent de décomposer une tâche fastidieuse en différents morceaux. Un assistant doit donc permettre la gestion de plusieurs "Pages".
+        
+        La notion principal dans Awl est la notion de descripteur de page représentée par la classe <code>PageWizardDescriptor</code>.
+        Cette notion regroupe :
+        <ul>
+            <li>le composant graphique représentant le contenu d'une page</li>
+            <li>le titre de la page</li>
+            <li>une description des informations qu'elle regroupe</li>
+            <li>la relation qu'elle entretient avec les autres pages</li>
+        </ul>
+        
+        Dans Awl, à chaque page est associé un identifiant unique au sein de l'assistant. cet identifiant permet à d'autres pages de la référencer comme :
+        <ol>
+            <li>leur page suivante</li>
+            <li>leur page précédente</li>
+        </ol>
+        
+        Bien entendu, il existe des implémentations de cette notion de descripteur de page.
+        
+        Maintenant, nous allons déclarer un livre simplissime avec deux pages!!
+        
+        <code>
+            <pre>
+DefaultWizardPageDescriptor page1 = new DefaultWizardPageDescriptor();
+page1.setComponent(new JLabel("this is my first page"));
+page1.setDescription("my first page");
+
+DefaultWizardPageDescriptor page2 = new DefaultWizardPageDescriptor();
+page2.setComponent(new JLabel("this is my second page"));
+page2.setDescription("my second page");</pre></code>
+        
+        Maintenant que nos deux pages sont créées, il nous faut indiquer la relation existante entre ces deux pages et les enregistrer dans l'assistant.
+        <i>On prendra respectivement "1" et "2" comme identifiants de la première et de la deuxième page</i>.
+        
+        <code>
+            <pre>
+page1.setNextDescriptorId("2");
+page2.setPreviousDescriptorId("1");
+page1.setPreviousDescriptorId(WizardConstants.STARTING_DESCRIPTOR_ID);
+page2.setNextDescriptorId(WizardConstants.TERMINAL_DESCRIPTOR_ID);
+
+wizard.registerWizardPanel("1", page1);
+wizard.registerWizardPanel("2", page2);</pre></code>
+        
+        On commence par indiquer la relation entre les pages en indiquant les identifiants des pages pouvant être accédées
+        avant ou après la page prise en compte. On a ainsi indiqué en initialisant la propriété 'nextDescriptorId' de la première page
+        qu'après elle, devait s'afficher la deuxième page. De manière réciproque, on a indiqué
+        que si l'on souhaitait revenir en arrière à partir de la deuxième page, alors, il faudrait
+        que l'on affiche la première page.
+        Ensuite, il faut indiquer à l'assistant par quelle page, il devra démarré.
+        En fait, on peut estimer que l'assistant gérera toujours deux pages de plus que le nombre de pages enregistrées :
+        
+        En effet, il existe deux identifiants factices réservés :<br/>
+        <ul>
+            <li>WizardConstants.STARTING_DESCRIPTOR_ID ("starting")</li>
+            <li>WizardConstants.TERMINAL_DESCRIPTOR_ID ("terminal")</li>
+        </ul>
+        
+        qui en théorie représente des pages virtuelles qui ne seront jamais présentées par l'assistant.
+        Ainsi, au lancement de l'assistant, celui-ci affichera donc la page ayant son attribut 'previousDescriptorId' valant <code>WizardConstants.STARTING_DESCRIPTOR_ID</code>.
+        De même, lorsque l'assistant affichera une page caractérisée par un attribut 'nextDescriptorId', il estimera qu'aucune autre page ne pourront être visualisé
+        après la page courante et donc, par défaut, permettra l'accès au bouton 'Terminer'.
+        
+        A noter, qu'il est donc inutile d'associer des pages à ces deux identifiants réservés.
+        
+        Il suffit ensuite d'enregistrer les pages (l'ordre n'a pas d'importance).
+        
+        Maintenant, le contenu de notre assistant est initialisé, il suffit juste de configurer notre boîte de dialogue représentant notre assistant
+        de la même manière qu'une JDialog Swing :
+        
+        <code>
+            <pre>
+wizard.setDefaultCloseOperation(wizard.DISPOSE_ON_CLOSE);
+wizard.setTitle("Read a bad book...");
+wizard.setSize(new Dimension(430, 300));
+wizard.setVisible(true);</pre></code>
+        
+        Voici le résultat : 
+        
+        <table border="0">
+            
+            <tr>
+                <td><img src="images/tutorial/first_page.png"/></td>
+                <td><img src="images/tutorial/second_page.png"/></td>
+            </tr>
+            
+        </table>
+        
+    </body>
+</document>

@@ -1,0 +1,248 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.awl</groupId>
+        <artifactId>awl-parent</artifactId>
+        <version>1.1.0-rc</version>
+    </parent>
+    
+    <artifactId>awl</artifactId>
+    <packaging>jar</packaging>
+    <name>Another wizard library</name>
+    <description>Java swing based library to create wizard</description>
+    <url>http://awl-wizard.sourceforge.net</url>
+    
+    <licenses>
+	<license>
+	    <name>LPGL 2.1</name>
+	    <url>http://www.gnu.org/licenses/lgpl-2.1.txt</url>
+	</license>
+    </licenses>
+    
+    <developers>
+	<developer>
+	    <id>ap</id>
+	    <name>Alexis PARIS</name>
+	    <email>xixi31@users.sourceforge.net</email>
+	    <url>perso.wanadoo.fr/alexis.paris</url>
+	    <roles>
+		<role>administrator</role>
+	    </roles>
+	</developer>
+    </developers>
+    
+    <dependencies>
+	<dependency>
+	    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	    <version>3.8.1</version>
+	    <scope>test</scope>
+	</dependency>
+	<dependency>
+	    <groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>1.2.9</version>
+	    <scope>provided</scope>
+	</dependency>
+	<!--dependency>
+	    <groupId>org.codehaus.mojo</groupId>
+	    <artifactId>keytool-maven-plugin</artifactId>
+	    <version>1.5</version>
+	</dependency-->
+    </dependencies>
+    
+    <build>
+	<plugins>
+	    
+	    <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-site-plugin</artifactId>
+		<version>2.2</version>
+		<configuration>
+		    <locales>en,fr</locales>
+		</configuration>
+	    </plugin>
+	    
+	    <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-compiler-plugin</artifactId>
+		<configuration>
+		    <source>1.6</source>
+		    <target>1.6</target>
+		</configuration>
+	    </plugin>
+	    
+	    <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-jar-plugin</artifactId>
+		<configuration>
+		    <archive>
+			<manifest>
+			    <mainClass>org.awl.demo.AwlDemo</mainClass>
+			    <!--mainClass>org.awl.demo.WizardWithMessage</mainClass-->
+			    <packageName>org</packageName>
+			    <addClasspath>true</addClasspath>
+			    <addExtensions/>
+			    <classpathPrefix>libs</classpathPrefix>
+			</manifest>
+			<manifestEntries>
+			    <mode>development</mode>
+			    <url>${pom.url}</url>
+			</manifestEntries>
+		    </archive>
+		</configuration>
+	    </plugin>
+	    <plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>exec-maven-plugin</artifactId>
+		<configuration>
+		    <!--mainClass>org.awl.demo.AwlDemo</mainClass-->
+		    <!--mainClass>org.awl.demo.WizardWithMessage</mainClass-->
+		    <mainClass>org.awl.header.EclipseWizardTest</mainClass>
+		</configuration>
+	    </plugin>
+	    
+	    <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-surefire-plugin</artifactId>
+		<configuration>
+		    <forkMode>once</forkMode>
+		    <testFailureIgnore>true</testFailureIgnore>
+		    <childDelegation>false</childDelegation>
+		</configuration>
+		<executions>
+		    <execution>
+			<goals>
+			    <goal>test</goal>
+			</goals>
+		    </execution>
+		</executions>
+	    </plugin>
+	    
+	    <plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>cobertura-maven-plugin</artifactId>
+		<executions>
+		    <execution>
+			<goals>
+			    <goal>clean</goal>
+			</goals>
+		    </execution>
+		</executions>
+	    </plugin>
+	    
+	    <plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>webstart-maven-plugin</artifactId>
+		<version>1.0-beta-3</version>
+		<executions>
+		    <execution>
+			<goals>
+			    <goal>jnlp</goal> <!-- use jnlp, jnlp-inline or jnlp-single as appropriate -->
+			</goals>
+		    </execution>
+		</executions>
+		<configuration>
+		    <jnlp>
+			<outputFile>launch.jnlp</outputFile>
+			<mainClass>org.awl.demo.AwlDemo</mainClass>
+		    </jnlp>
+		    <sign>
+			<!-- on utilise le keystore par défaut sous home de user -->
+			<!--keystore>.keystore</keystore-->
+			<keypass>i18nme57yx</keypass>
+			<storepass>59aemv8</storepass>
+			<storetype>jks</storetype>
+			<alias>awl</alias>
+			<validity>9999</validity>
+			
+			<dnameCn>awl</dnameCn>
+			<dnameOu></dnameOu>
+			<dnameO></dnameO>
+			<dnameL>Hayange</dnameL>
+			<dnameSt>Moselle</dnameSt>
+			<dnameC>FR</dnameC>
+			
+			<verify>true</verify>
+			
+		    </sign>
+		    
+		    <pack200>false</pack200>
+		    <gzip>false</gzip>
+		    <outputJarVersions>true</outputJarVersions>
+		    <verbose>true</verbose>
+		</configuration>
+	    </plugin>
+	    
+	</plugins>
+    </build>
+    
+    <reporting>
+	
+	<plugins>
+	    <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-javadoc-plugin</artifactId>
+		<configuration>
+		    <minmemory>128m</minmemory>
+		    <maxmemory>512</maxmemory>
+		</configuration>
+	    </plugin>
+	    
+	    <plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>changes-maven-plugin</artifactId>
+		<reportSets>
+		    <reportSet>
+			<reports>
+			    <report>changes-report</report>
+			</reports>
+		    </reportSet>
+		</reportSets>
+	    </plugin>
+	    
+	    <plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>webstart-maven-plugin</artifactId>
+		<version>1.0-beta-3</version>
+	    </plugin>
+	    
+	</plugins>
+	
+    </reporting>
+    
+    
+    <issueManagement>
+	<system>Sourceforge</system>
+	<url>http://sourceforge.net/tracker/?group_id=184785</url>
+    </issueManagement>
+    
+    <!--mailingLists>
+        <mailingList>
+            <name>User List</name>
+            <subscribe>user-subscribe@127.0.0.1</subscribe>
+            <unsubscribe>user-unsubscribe@127.0.0.1</unsubscribe>
+            <post>user@127.0.0.1</post>
+            <archive>http://127.0.0.1/user/</archive>
+            <otherArchives>
+                <otherArchive>http://base.google.com/base/1/127.0.0.1</otherArchive>
+            </otherArchives>
+        </mailingList>
+    </mailingLists-->
+    
+    <scm>
+	<connection>scm:svn:https://awl-wizard.svn.sourceforge.net/svnroot/awl-wizard</connection>
+	<developerConnection>scm:svn:https://awl-wizard.svn.sourceforge.net/svnroot/awl-wizard</developerConnection>
+	<url>http://awl-wizard.svn.sourceforge.net/viewvc/awl-wizard/awl/</url>
+    </scm>
+    
+    <distributionManagement> 
+	<site> 
+	    <id>sourceforge.net</id> 
+	    <url>scp://shell.sourceforge.net/home/groups/a/aw/awl-wizard/htdocs</url>
+	</site> 
+    </distributionManagement> 
+    
+    
+</project>

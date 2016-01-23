@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    <header>
+        <title><h1>Road map</h1></title> 
+    </header> 
+    <body><br/>
+        <p>
+            Features available in the next versions of Awl :
+            <ul>
+                <li>Displaying message in the header of the wizard like done in the Wizard api of Eclipse.
+                </li>
+                <li>Help integration in the pages of a wizard.
+                </li>
+                <li>Integration of a wizard map helping pages to share data.</li>
+            </ul>
+            
+            <br/>
+            To ask for new features, go to 
+            <a href="http://sourceforge.net/tracker/?group_id=184785">"Feature Requests"</a> 
+            in the sourceforge web site of this project.
+        </p>
+    </body>
+        
+</document>

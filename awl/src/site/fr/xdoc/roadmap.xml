@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    <header>
+        <title><h1>Road map</h1></title> 
+    </header> 
+    <body><br/>
+        <p>
+            Les fonctionnalités suivantes seront intégrées dans les futures versions de Awl :
+            <ul>
+                <li>Affichage des messages dans le bandeau de l'assistant par un panneau superposé
+                    remontant à partir du bas du bandeau (même fonctionnement qu'avec l'api de wizard utilisé par Eclipse).
+                </li>
+                <li>Intégration d'une aide sur les page d'un assistant.</li>
+                <li>Intégration d'une map permettant aux pages le partage de données.</li>
+            </ul>
+            
+            <br/>
+            Pour toute demande de nouvelles fonctionnalités, veuillez vous rendre dans la partie 
+            <a href="http://sourceforge.net/tracker/?group_id=184785">"Feature Requests"</a> accessible sur le site
+            Sourceforge du projet.
+        </p>
+    </body>
+        
+</document>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+    <properties>
+	<title>Hotel Database tutorial application</title>
+	<author email="duke@wakaleo.com>Duke Java"></author>
+    </properties>
+    <body>
+	<release version="" desc="version" date="2008-01-08">
+	    <action dev="alexis PARIS" type="add">
+		Message can be displayed by a layer that is displayed on the header.
+		This was inspired from the wizard API from Eclipse.
+	    </action>
+	    <action dev="alexis PARIS" type="add">
+		A specific tooltip is available on the summary.
+		When the mouse is under the title of a page in the summary, the description is used as tooltip.
+	    </action>
+	</release>
+	<!--release version="1.0.1" date="2005-11-18" description="Release fix">
+	    <action dev="Duke Java" type="add">
+		Added a cool feature.
+	    </action>
+	    <action dev="Duke Java" type="fix" issue="1254">
+		Fixed a nasty bug.
+	    </action>
+	    <action dev="Duke Java" type="delete">
+		Removed a feature that nobody liked.
+	    </action>
+	</release-->
+	<!-- add , fix , remove , update -->
+    </body>
+</document>
+

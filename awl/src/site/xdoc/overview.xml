@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    <header>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+        <meta name="copyright" content="2008 by Alexis PARIS"/>
+        <meta name="robots" content="all"/>
+        <meta name="author" content="Alexis PARIS"/>
+        <meta name="subject" content="Java wizard assistant"/>
+        <meta name="topic" content="Metas"/>
+        <meta name="expires" content="never"/>
+        <meta name="keywords" content="Awl Java wizard assistant page"/>
+        
+        <title><h1>Welcome on the Awl web site</h1></title>
+        
+    </header> 
+    <body>
+        <br/>
+        <section id="intro" name="introduction">
+            <p>
+               Interaction between software and user sometimes requires more comfort, clarity, simplicity, forcing to proceed step by step.
+               In these cases, wizards are the best solutions.
+               
+               Nowaday, the standard Java API does not provide mecanism to create wizards.
+               
+               the aim of <b>Awl</b>, <u>Another Wizard Library</u>, is to provide a framework which allow to easily create wizards in any Java applications
+               that used a graphical user interface based on Java Swing.
+               <br/><br/>
+               This site propose a short tutorial and <a href="documentation.html">documentation</a> on how to use Awl.
+            </p>
+            <p>Awl, under <a href="license.html">license LPGL 2.1</a>, is available for differents versions of Java runtime environments, 1.5 and 1.4.
+            </p>
+            
+            <p>
+                Demo of Awl
+                <a href="https://jdnc-incubator.dev.java.net/documentation/l2fprod/jnlp/l2fprod.jnlp">
+                    <img src="images/javawebstart.png" border="0"/>
+                </a>
+            </p>
+            
+            <br/><br/>
+            
+            <p>For any purposes, send a mail to : 
+                <a href="mailto:xixi31@users.sourceforge.net?subject=Awl">xixi31@users.sourceforge.net</a>
+            </p>
+        </section>
+    </body>
+</document>

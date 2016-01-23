@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<faqs>
+
+  <part id="about">
+    <faq id="sup">
+      <question>How to get support for Awl?</question>
+      <answer>
+        <p>
+          Please refer first to the documentation available on this web site.<br/>
+          Else, send mail to <a href="mailto:xixi31@users.sourceforge.net?subject=Awl">xixi31@users.sourceforge.net</a>.
+        </p>
+      </answer>
+    </faq>
+  </part>
+</faqs>

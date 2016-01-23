@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    <header>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+        <meta name="copyright" content="2008 by Alexis PARIS"/>
+        <meta name="robots" content="all"/>
+        <!--meta name="author" content="Alexis PARIS"/-->
+        <meta name="subject" content="Java wizard assistant"/>
+        <meta name="topic" content="Metas"/>
+        <meta name="expires" content="never"/>
+        <meta name="keywords" content="Awl Java wizard assistant page"/>
+        
+        <title><h1>Bienvenu sur le site de Awl</h1></title>
+        
+    </header> 
+    <body>
+        <br/>
+        <section id="intro" name="introduction">
+            <p>L'interaction entre un logiciel et un utilisateur requiert par moments d'avantage de
+               confort, clarté, simplicité, nécessitant parfois de procéder étape par étape.
+               Souvent dans ce genre de cas, on utilise des assistants (wizards en anglais).
+               Les <b>wizards</b> sont maintenant assez répandus dans la plupart des applications grand public.
+               
+               Aujourd'hui, l'API standard Java n'offre pas de mécanisme permettant une création aisée de ceux-ci.
+               
+               <b>Awl</b>, <u>Another Wizard Library</u>, a été créé dans le but de pallier à ce manque en fournissant un 
+               framework permettant de facilement intégrer de telles assistants dans n'importe quelle application
+               Java basée sur une interface graphique Swing.
+               <br/><br/>
+	       Ce site vous permettra au travers de différents <a href="tutorial.html">didacticiels</a> de mieux appréhender le fonctionnement et
+               les fonctionnalités de Awl.
+               <br/><br/>
+               Il existe également une <a href="documentation.html">documentation</a> plus poussée qui vous permettra d'en apprendre plus 
+               sur les possibilités offertes.
+            </p>
+            <p>Awl, sous <a href="license.html">license LPGL 2.1</a>, est disponible pour les versions d'environnement Java 1.5 et plus mais il existe aussi des versions compilées pour Java 1.4.
+            </p>
+            
+            <p>
+		<dir>
+		    <table>
+			<!--tr><td width="30%" style="vertical-align:middle">Démonstration de Awl</td>
+			    <td>
+				<a href="http://awl-wizard.sourceforge.net/jnlp/launch.jnlp">
+				    <img src="images/javawebstart.png" border="0"/>
+				</a>
+			    </td>
+			</tr-->
+			<!--tr><td width="30%" style="vertical-align:middle">Si vous souhaitez supporter ce projet</td>
+			    <td>
+				<a href="https://sourceforge.net/donate/index.php?group_id=184785">
+				    <img src="http://images.sourceforge.net/images/project-support.jpg" width="88"
+					height="32" border="0" alt="Support this project"/>
+				</a>
+			    </td>
+			</tr-->
+		    </table>
+		</dir>
+            </p>
+            
+	    <br/>
+            <p>Pour toutes remarques ou questions, n'hesitez pas à m'envoyer un mail à l'adresse suivante :
+                <a href="mailto:alexis.rt.paris@gmail.com?subject=Awl">alexis.rt.paris@gmail.com</a>
+            </p>
+	    <br/><br/><br/>
+	    <p align="right">
+		<a href="http://validator.w3.org/check?uri=referer">
+		    <img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Transitional" border="0" align="right"/>
+		</a>
+	    </p>
+        </section>
+    </body>
+</document>

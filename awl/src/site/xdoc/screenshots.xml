@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    
+    <header>
+            <title><h1>Screenshots</h1></title> 
+    </header> 
+    
+    <body><br/>
+    
+        <center><img src="images/wizard_example.png"/></center><br/>
+        <center><i>Awl used in <b>Siberia RCP</b></i></center>
+        
+        <br/><br/>
+        
+    </body>
+    
+</document>

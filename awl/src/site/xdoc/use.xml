@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    <header>
+        <title><h1>Projets using awl</h1></title> 
+    </header> 
+    <body><br/>
+        <p>
+            Here is a list of projects that used Awl :
+            
+            <ul>
+                <li>
+                    <a href="http://akrogen.sourceforge.net/">
+                        Akrogen
+                    </a>
+                </li>
+                <li>
+                    Siberia
+                </li>
+            </ul>
+            
+            If your project used Awl and you want it to appear here, send a mail to
+            <a href="mailto:xixi31@users.sourceforge.net?subject=Awl-referencement">xixi31@users.sourceforge.net</a>
+            in which you indicate the name of the project, a short description and a link to the web site of the project.
+        </p>
+    </body>
+        
+</document>

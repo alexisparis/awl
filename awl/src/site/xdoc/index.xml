@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    <header>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+        <meta name="copyright" content="2008 by Alexis PARIS"/>
+        <meta name="robots" content="all"/>
+        <!--meta name="author" content="Alexis PARIS"/-->
+        <meta name="subject" content="Java wizard assistant"/>
+        <meta name="topic" content="Metas"/>
+        <meta name="expires" content="never"/>
+        <meta name="keywords" content="Awl Java wizard assistant page"/>
+        
+        <title><h1>Welcome on the Awl web site</h1></title>
+        
+    </header> 
+    <body>
+        <br/>
+        <section id="intro" name="introduction">
+            <p>
+               Interaction between software and user sometimes requires more comfort, clarity, simplicity, forcing to proceed step by step.
+               In these cases, wizards are the best solutions.
+               
+               Nowaday, the standard Java API does not provide mecanism to create wizards.
+               
+               the aim of <b>Awl</b>, <u>Another Wizard Library</u>, is to provide a framework which allow to easily create wizards in any Java applications
+               that used a graphical user interface based on Java Swing.
+               <br/><br/>
+	       This site propose a <a href="tutorial.html">short tutorial</a> and <a href="documentation.html">documentation</a> on how to use Awl.
+            </p>
+            <p>Awl, under <a href="license.html">license LPGL 2.1</a>, is available for differents versions of Java runtime environments, 1.5 and 1.4.
+            </p>
+            
+            <p>
+		<dir>
+		    <table>
+			<!--tr><td width="30%" style="vertical-align:middle">Demo of Awl</td>
+			    <td>
+				<a href="http://awl-wizard.sourceforge.net/jnlp/launch.jnlp">
+				    <img src="images/javawebstart.png" border="0"/>
+				</a>
+			    </td>
+			</tr-->
+			<!--tr><td width="30%" style="vertical-align:middle">If you want to support this project</td>
+			    <td>
+				<a href="https://sourceforge.net/donate/index.php?group_id=184785">
+				    <img src="http://images.sourceforge.net/images/project-support.jpg" width="88"
+					height="32" border="0" alt="Support this project"/>
+				</a>
+			    </td>
+			</tr-->
+		    </table>
+		</dir>
+            </p>
+            
+	    <br/>
+            <p>For any purposes, send a mail to : 
+                <a href="mailto:alexis.rt.paris@gmail.com?subject=Awl">alexis.rt.paris@gmail.com</a>
+            </p>
+	    <br/><br/><br/>
+	    <p align="right">
+		<a href="http://validator.w3.org/check?uri=referer">
+		    <img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Transitional" border="0" align="right"/>
+		</a>
+	    </p>
+        </section>
+    </body>
+</document>

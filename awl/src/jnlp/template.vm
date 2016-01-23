@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+" codebase="http://awl-wizard.sourceforge.net" href="jnlp/launch.jnlp">
+    <information>
+	<title>Awl demonstration</title>
+	<homepage href="http://awl-wizard.sourceforge.net"/>
+	<vendor>awl</vendor>
+	<description kind="one-line">$informationDescription</description>
+	<description kind="short">$informationDescription</description>
+	<description kind="tooltip">$informationDescription</description>
+	<!--icon width="76" height="83" href="images/jnlp/images/small-rabbit.jpg"/>
+	<icon kind="splash" href="images/jnlp/rabbit.jpg"/-->
+    </information>
+    <security>
+	<all-permissions/>
+    </security>
+    <resources>
+	<j2se version="1.4+" initial-heap-size="32m" max-heap-size="128m"/>
+
+	<jar href="jnlp/awl-1.1.0-rc.jar" main="true"/>
+
+    </resources>
+    <application-desc main-class="$mainClass"></application-desc>
+</jnlp>

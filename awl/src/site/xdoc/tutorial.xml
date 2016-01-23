@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    <body>
+        
+        <h1>First steps</h1><br/>
+        
+        With this tutorial, you will be able to create your first wizard in a few minutes.<br/>    
+        It explains the way to create a simple wizard, which allows like a book, to go through severall pages.<br/><br/>
+        
+        The first thing to do is to create the graphical dialog component of the Wizard :
+        
+        <code><pre>
+Wizard wizard = new Wizard((JFrame)null);</pre></code>
+        
+        The aim of a wizard is generally to decompose a complex task. Therefore, a wizard must manage severall 'pages'.
+        
+        The main concept of Awl is 'page descriptor' represented by interface <code>PageWizardDescriptor</code>.
+        This concept is defined by :
+        <ul>
+            <li>the graphical component that represents the content of the page</li>
+            <li>a title</li>
+            <li>a description</li>
+            <li>the relationship with others pages</li>
+        </ul>
+        
+        In Awl, an id is assignated to every page. This id is used to define relationship between page :
+        <ol>
+            <li>the previous page</li>
+            <li>the next page</li>
+        </ol>
+        
+        Let's describe our book like wizard.
+        
+        <code>
+            <pre>
+DefaultWizardPageDescriptor page1 = new DefaultWizardPageDescriptor();
+page1.setComponent(new JLabel("this is my first page"));
+page1.setDescription("my first page");
+
+DefaultWizardPageDescriptor page2 = new DefaultWizardPageDescriptor();
+page2.setComponent(new JLabel("this is my second page"));
+page2.setDescription("my second page");</pre></code>
+        
+        Our two pages are created, we must now indicate the relationship between these pages.
+        <i>We respectively take id "1" et "2" for our first and second pages</i>.
+        
+        <code>
+            <pre>
+page1.setNextDescriptorId("2");
+page2.setPreviousDescriptorId("1");
+page1.setPreviousDescriptorId(WizardConstants.STARTING_DESCRIPTOR_ID);
+page2.setNextDescriptorId(WizardConstants.TERMINAL_DESCRIPTOR_ID);
+
+wizard.registerWizardPanel("1", page1);
+wizard.registerWizardPanel("2", page2);</pre></code>
+        
+        We start by speciying the relationship; by calling setNextDescriptorId("2") on page1, we declare that after page1, we will have the page descriptor with
+        id "2". Conversely, by calling method setPreviousDescriptorId("1") on page2, we declare that before page2, we have a page descriptor registered with id "1".
+        
+        Internally, the wizard always manage two fictive pages :
+        <ul>
+            <li>one registered with WizardConstants.STARTING_DESCRIPTOR_ID ("starting")</li>
+            <li>and one registered with WizardConstants.TERMINAL_DESCRIPTOR_ID ("terminal")</li>
+        </ul>
+        these two reserved ids shall never be used to register page descriptors.
+        
+        That is why we indicate that the page before page1 is the page with id WizardConstants.STARTING_DESCRIPTOR_ID
+        and that the page after page2 is the page with id WizardConstants.TERMINAL_DESCRIPTOR_ID.
+        Pages with id WizardConstants.STARTING_DESCRIPTOR_ID and WizardConstants.TERMINAL_DESCRIPTOR_ID are never displayed by the wizard; they virtually exists
+        to let wizard know with which page the wizard should start and when it could finish.
+        
+        After that, we have to register pages by calling registerWizardPanel on the Wizard object.
+        
+        Now, our wizard is completely initialized, and like any other JDialog, we force our wizard to be visible
+        
+        <code>
+            <pre>
+wizard.setDefaultCloseOperation(wizard.DISPOSE_ON_CLOSE);
+wizard.setTitle("Read a bad book...");
+wizard.setSize(new Dimension(430, 300));
+wizard.setVisible(true);</pre></code>
+        
+        Here is the result :
+        
+        <table border="0">
+            
+            <tr>
+                <td><img src="images/tutorial/first_page.png"/></td>
+                <td><img src="images/tutorial/second_page.png"/></td>
+            </tr>
+            
+        </table>
+        
+    </body>
+</document>

@@ -1,0 +1,88 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.awl</groupId>
+        <artifactId>awl-parent</artifactId>
+        <version>1.1.0-rc</version>
+    </parent>
+
+  <artifactId>awl-test</artifactId>
+  <packaging>jar</packaging>
+  <name>awl-test</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>awl</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+  
+  
+  <build>
+      <plugins>
+	  
+	  <plugin>
+	      <groupId>org.apache.maven.plugins</groupId>
+	      <artifactId>maven-compiler-plugin</artifactId>
+	      <configuration>
+		  <source>1.4</source>
+		  <target>1.4</target>
+	      </configuration>
+	  </plugin>
+	  
+	  <plugin>
+	      <artifactId>maven-assembly-plugin</artifactId>
+	      <configuration>
+		  <descriptorRefs>
+		      <descriptorRef>jar-with-dependencies</descriptorRef>
+		  </descriptorRefs>
+		  <archive>
+		      <manifest>
+			  <mainClass>org.awl.test.WizardPresentation</mainClass>
+		      </manifest>
+		  </archive>
+	      </configuration>
+	      <executions>
+          <execution>
+            <id>make-assembly</id> <!-- this is used for inheritance merges -->
+            <phase>package</phase> <!-- bind to the packaging phase -->
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+	  </plugin>
+	  
+	  <plugin>
+	      <groupId>org.apache.maven.plugins</groupId>
+	      <artifactId>maven-jar-plugin</artifactId>
+	      <configuration>
+		  <archive>
+		      <manifest>
+			  <mainClass>org.awl.test.WizardPresentation</mainClass>
+			  <packageName>org</packageName>
+			  <addClasspath>true</addClasspath>
+			  <addExtensions/>
+			  <classpathPrefix>libs</classpathPrefix>
+		      </manifest>
+		      <manifestEntries>
+			  <mode>development</mode>
+			  <url>${pom.url}</url>
+		      </manifestEntries>
+		  </archive>
+	      </configuration>
+	  </plugin>
+	  
+      </plugins>
+  </build>
+    
+</project>

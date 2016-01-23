@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<faqs>
+
+  <part id="about">
+    <faq id="sup">
+      <question>Comment obtenir des informations supplémentaires sur Awl?</question>
+      <answer>
+        <p>
+          Vous pouvez tout d'abord vous référer à la documentation.<br/>
+          Sinon, envoyer un mail à <a href="mailto:xixi31@users.sourceforge.net?subject=Awl">xixi31@users.sourceforge.net</a>.
+        </p>
+      </answer>
+    </faq>
+  </part>
+</faqs>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    <header>
+        <title><h1>Téléchargement de Awl</h1></title> 
+    </header> 
+    <body><br/>
+        <p>
+            <a href="www.blackdog-project.org/awl-releases/awl-1.1.0-rc.jar">Télécharger la librairie</a>
+            <br/><br/>
+            
+            Les sources du projet sont également disponibles sur 
+            <a href="https://github.com/alexisparis/awl-parent">GitHub</a>.<br/>
+        </p>
+    </body>
+        
+</document>
