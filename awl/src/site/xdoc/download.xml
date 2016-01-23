@@ -2,11 +2,14 @@
 <!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
 <document>
     <header>
-        <title><h1>Téléchargement de Awl</h1></title> 
+        <title><h1>Download Awl</h1></title> 
     </header> 
     <body><br/>
         <p>
-            <a href="www.blackdog-project.org/awl-releases/awl-1.1.0-rc.jar">Download the library</a>
+            <a href="http://www.blackdog-project.org/awl-releases/awl-1.1.0-rc.jar">Download the library</a>
+            <br/>
+            You can run <i>java -jar awl-1.1.0-rc.jar</i> to see a demonstration of AWL.
+
             <br/><br/>
             
             Sources of the project are also available on <a href="https://github.com/alexisparis/awl-parent">GitHub</a>.
